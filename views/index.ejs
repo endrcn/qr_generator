@@ -57,7 +57,33 @@
                             </div>
                         </div>
                         <!-- Bootstrap Tab End -->
-                        <div id="inputFields"></div>
+                        <div id="inputFields">
+                            <!-- VCARD Input Fields -->
+                            <div class="input-group">
+                                <input type="text" class="form-control mt-2" name="FN" placeholder="First Name"/>
+                                <input type="text" class="form-control mt-2" name="LN" placeholder="Last Name"/>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control mt-2" name="ORG" placeholder="Company"/>
+                                <input type="text" class="form-control mt-2" name="TITLE" placeholder="Title"/>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control mt-2" name="ADR" placeholder="Address"/>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control mt-2" name="CITY" placeholder="City"/>
+                                <input type="text" class="form-control mt-2" name="ZIP" placeholder="Postal Code"/>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control mt-2" name="STATE" placeholder="State"/>
+                                <input type="text" class="form-control mt-2" name="COUNTRY" placeholder="Country"/>
+                            </div>
+                            <input type="text" class="form-control mt-2" name="TEL;WORK;VOICE" placeholder="Work Phone"/>
+                            <input type="text" class="form-control mt-2" name="TEL;CELL" placeholder="Mobile Phone"/>
+                            <input type="text" class="form-control mt-2" name="TEL;FAX" placeholder="Fax"/>
+                            <input type="email" class="form-control mt-2" name="EMAIL;WORK;INTERNET" placeholder="Email"/>
+                            <input type="url" class="form-control mt-2" name="URL" placeholder="Website"/>
+                        </div>
                     </form>
                 </div>
                 <div class="col-md-4 bg-white p-4 text-white d-flex flex-column align-items-center">
@@ -93,6 +119,10 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>
     <script>
+        $(document).ready(function() {
+            $('#vcard-tab').click(); // Automatically trigger click on VCARD tab to populate input fields on page load
+        });
+
         $('#typeTab a').on('click', function (e) {
             e.preventDefault();
             $(this).tab('show');
