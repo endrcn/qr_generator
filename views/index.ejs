@@ -4,17 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dynamic QR code generator. Quickly create your custom QR codes for VCARD, URL, MAP, Twitter, and Youtube.">
+    <meta name="description"
+        content="Dynamic QR code generator. Quickly create your custom QR codes for VCARD, URL, MAP, Twitter, and Youtube.">
     <meta name="keywords" content="QR code, QR generator, VCARD QR, URL QR, MAP QR, Twitter QR, Youtube QR">
     <meta name="author" content="QR Code Generator">
-    <title><%= title %> | QR Code Generator</title>
-    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+    <title>
+        <%= title %> | QR Code Generator
+    </title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+        integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body class="bg-light">
     <header>
-        <h1 class="text-center mb-4"><%= title %></h1>
+        <h1 class="text-center mb-4">
+            <%= title %>
+        </h1>
     </header>
     <main class="container mt-5">
         <section>
@@ -24,23 +30,29 @@
                         <!-- Bootstrap Tab Start -->
                         <ul class="nav nav-tabs" id="typeTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="vcard-tab" data-toggle="tab" href="#vcard" role="tab" aria-controls="vcard" aria-selected="true">VCARD</a>
+                                <a class="nav-link active" id="vcard-tab" data-toggle="tab" href="#vcard" role="tab"
+                                    aria-controls="vcard" aria-selected="true">VCARD</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="url-tab" data-toggle="tab" href="#url" role="tab" aria-controls="url" aria-selected="false">URL</a>
+                                <a class="nav-link" id="url-tab" data-toggle="tab" href="#url" role="tab"
+                                    aria-controls="url" aria-selected="false">URL</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="false">MAP</a>
+                                <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab"
+                                    aria-controls="map" aria-selected="false">MAP</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="twitter-tab" data-toggle="tab" href="#twitter" role="tab" aria-controls="twitter" aria-selected="false">Twitter</a>
+                                <a class="nav-link" id="twitter-tab" data-toggle="tab" href="#twitter" role="tab"
+                                    aria-controls="twitter" aria-selected="false">Twitter</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="youtube-tab" data-toggle="tab" href="#youtube" role="tab" aria-controls="youtube" aria-selected="false">Youtube</a>
+                                <a class="nav-link" id="youtube-tab" data-toggle="tab" href="#youtube" role="tab"
+                                    aria-controls="youtube" aria-selected="false">Youtube</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="typeTabContent">
-                            <div class="tab-pane fade show active" id="vcard" role="tabpanel" aria-labelledby="vcard-tab">
+                            <div class="tab-pane fade show active" id="vcard" role="tabpanel"
+                                aria-labelledby="vcard-tab">
                                 <!-- VCARD Contents -->
                             </div>
                             <div class="tab-pane fade" id="url" role="tabpanel" aria-labelledby="url-tab">
@@ -60,34 +72,37 @@
                         <div id="inputFields">
                             <!-- VCARD Input Fields -->
                             <div class="input-group">
-                                <input type="text" class="form-control mt-2" name="FN" placeholder="First Name"/>
-                                <input type="text" class="form-control mt-2" name="LN" placeholder="Last Name"/>
+                                <input type="text" class="form-control mt-2" name="FN" placeholder="First Name" />
+                                <input type="text" class="form-control mt-2" name="LN" placeholder="Last Name" />
                             </div>
                             <div class="input-group">
-                                <input type="text" class="form-control mt-2" name="ORG" placeholder="Company"/>
-                                <input type="text" class="form-control mt-2" name="TITLE" placeholder="Title"/>
+                                <input type="text" class="form-control mt-2" name="ORG" placeholder="Company" />
+                                <input type="text" class="form-control mt-2" name="TITLE" placeholder="Title" />
                             </div>
                             <div class="input-group">
-                                <input type="text" class="form-control mt-2" name="ADR" placeholder="Address"/>
+                                <input type="text" class="form-control mt-2" name="ADR" placeholder="Address" />
                             </div>
                             <div class="input-group">
-                                <input type="text" class="form-control mt-2" name="CITY" placeholder="City"/>
-                                <input type="text" class="form-control mt-2" name="ZIP" placeholder="Postal Code"/>
+                                <input type="text" class="form-control mt-2" name="CITY" placeholder="City" />
+                                <input type="text" class="form-control mt-2" name="ZIP" placeholder="Postal Code" />
                             </div>
                             <div class="input-group">
-                                <input type="text" class="form-control mt-2" name="STATE" placeholder="State"/>
-                                <input type="text" class="form-control mt-2" name="COUNTRY" placeholder="Country"/>
+                                <input type="text" class="form-control mt-2" name="STATE" placeholder="State" />
+                                <input type="text" class="form-control mt-2" name="COUNTRY" placeholder="Country" />
                             </div>
-                            <input type="text" class="form-control mt-2" name="TEL;WORK;VOICE" placeholder="Work Phone"/>
-                            <input type="text" class="form-control mt-2" name="TEL;CELL" placeholder="Mobile Phone"/>
-                            <input type="text" class="form-control mt-2" name="TEL;FAX" placeholder="Fax"/>
-                            <input type="email" class="form-control mt-2" name="EMAIL;WORK;INTERNET" placeholder="Email"/>
-                            <input type="url" class="form-control mt-2" name="URL" placeholder="Website"/>
+                            <input type="text" class="form-control mt-2" name="TEL;WORK;VOICE"
+                                placeholder="Work Phone" />
+                            <input type="text" class="form-control mt-2" name="TEL;CELL" placeholder="Mobile Phone" />
+                            <input type="text" class="form-control mt-2" name="TEL;FAX" placeholder="Fax" />
+                            <input type="email" class="form-control mt-2" name="EMAIL;WORK;INTERNET"
+                                placeholder="Email" />
+                            <input type="url" class="form-control mt-2" name="URL" placeholder="Website" />
                         </div>
                     </form>
                 </div>
                 <div class="col-md-4 bg-white p-4 text-white d-flex flex-column align-items-center">
-                    <img id="qrImage" class="img-fluid" src="https://via.placeholder.com/150" style="max-width: 100%; height: auto;" alt="Generated QR Code Placeholder" />
+                    <img id="qrImage" class="img-fluid" src="https://via.placeholder.com/150"
+                        style="max-width: 100%; height: auto;" alt="Generated QR Code Placeholder" />
                     <button type="submit" form="qrForm" class="btn btn-primary mt-3">Generate QR</button>
                     <button id="downloadQR" class="btn btn-success mt-3" disabled>Download QR</button>
                 </div>
@@ -95,13 +110,13 @@
                     // QR kodu oluşturulduktan sonra Download butonunu etkinleştir
                     // Bu örnekte, QR kodunun oluşturulduğunu simüle etmek için basit bir mantık kullanılmıştır.
                     // Gerçek bir uygulamada, QR kodunun başarıyla oluşturulup oluşturulmadığını kontrol eden bir mantık olmalıdır.
-                    document.getElementById('qrForm').addEventListener('submit', function() {
+                    document.getElementById('qrForm').addEventListener('submit', function () {
                         // QR kodu oluşturulduğunu varsayalım ve Download butonunu etkinleştir
                         document.getElementById('downloadQR').disabled = false;
                     });
 
                     // Download butonuna tıklandığında QR kodunu indir
-                    document.getElementById('downloadQR').addEventListener('click', function() {
+                    document.getElementById('downloadQR').addEventListener('click', function () {
                         var qrImageSrc = document.getElementById('qrImage').src;
                         // Basit bir indirme işlemi gerçekleştir
                         var a = document.createElement('a');
@@ -115,11 +130,17 @@
             </div>
         </section>
     </main>
-    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
-    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
+        integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
+        integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1'
+        crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
+        integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM'
+        crossorigin='anonymous'></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#vcard-tab').click(); // Automatically trigger click on VCARD tab to populate input fields on page load
         });
 
@@ -213,7 +234,16 @@
         });
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3093952790458444"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVM1GKJE37"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MVM1GKJE37');
+    </script>
 </body>
 
 </html>
