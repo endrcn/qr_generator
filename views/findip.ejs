@@ -7,7 +7,8 @@
     <meta name="description" content="Find your IP address. Quickly and securely learn your IPv4 and IPv6 addresses.">
     <meta name="keywords" content="IP, IPv4, IPv6, Find IP Address, Query IP">
     <title>Find My IP Address</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
@@ -30,24 +31,35 @@
         function showCopyNotification() {
             var notification = document.getElementById('copyNotification');
             notification.style.display = 'block';
-            setTimeout(function() {
+            setTimeout(function () {
                 notification.style.display = 'none';
             }, 2000); // 2 saniye sonra bildirimi gizle
         }
 
         fetch('https://api64.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('ipv4').innerHTML = '<b>IPv4:</b> ' + data.ip + ' <i class="fas fa-copy" style="cursor: pointer;" onclick="navigator.clipboard.writeText(\'' + data.ip + '\'); showCopyNotification();" title="Copy"></i>';
-        })
-        .catch(error => console.error('Error:', error));
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ipv4').innerHTML = '<b>IPv4:</b> ' + data.ip + ' <i class="fas fa-copy" style="cursor: pointer;" onclick="navigator.clipboard.writeText(\'' + data.ip + '\'); showCopyNotification();" title="Copy"></i>';
+            })
+            .catch(error => console.error('Error:', error));
 
         fetch('https://api64.ipify.org?format=json&format=ipv6')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('ipv6').innerHTML = '<b>IPv6:</b> ' + data.ip + ' <i class="fas fa-copy" style="cursor: pointer;" onclick="navigator.clipboard.writeText(\'' + data.ip + '\'); showCopyNotification();" title="Copy"></i>';
-        })
-        .catch(error => console.error('Error:', error));
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ipv6').innerHTML = '<b>IPv6:</b> ' + data.ip + ' <i class="fas fa-copy" style="cursor: pointer;" onclick="navigator.clipboard.writeText(\'' + data.ip + '\'); showCopyNotification();" title="Copy"></i>';
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3093952790458444"
+        crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVM1GKJE37"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MVM1GKJE37');
     </script>
 </body>
 
