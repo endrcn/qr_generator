@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'QR Generator' });
+  res.render('qr', { title: 'QR Generator' });
 });
 
 /* GET Find IP page. */

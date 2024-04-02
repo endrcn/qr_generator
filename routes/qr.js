@@ -4,7 +4,7 @@ const QRCode = require('qrcode');
 
 /* GET QR page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'QR Generator' });
+  res.render('qr', { title: 'QR Generator' });
 });
 
 router.get('/generator', (req, res) => {
