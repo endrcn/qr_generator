@@ -2,6 +2,11 @@ const express = require('express');
 var router = express.Router();
 const QRCode = require('qrcode');
 
+/* GET QR page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'QR Generator' });
+});
+
 router.get('/generator', (req, res) => {
   const { data } = req.query;
   if (!data) {

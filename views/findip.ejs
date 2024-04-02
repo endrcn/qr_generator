@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your IP Address</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Your IP Address</h2>
+        <p id="ipv4">IPv4: Loading...</p>
+        <p id="ipv6">IPv6: Loading...</p>
+    </div>
+
+    <script>
+        fetch('https://api64.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('ipv4').innerText = 'IPv4: ' + data.ip;
+        })
+        .catch(error => console.error('Error:', error));
+
+        fetch('https://api64.ipify.org?format=json&format=ipv6')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('ipv6').innerText = 'IPv6: ' + data.ip;
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+</body>
+
+</html>
